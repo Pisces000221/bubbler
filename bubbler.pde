@@ -14,10 +14,8 @@ void draw() {
   for (int i = 0; i < 1000; ++i) {
     int x = int(random(img.width)), y = int(random(img.height));
     color c = img.pixels[y * img.width + x];
-    if (red(c) + green(c) + blue(c) <= 240 * 3) {
-      fill(c);
-      ellipse(x * scaleFactor, y * scaleFactor, 5, 5);
-    } else --i;
+    fill(c);
+    ellipse(x * scaleFactor, y * scaleFactor, 5, 5);
   }
 }
 
